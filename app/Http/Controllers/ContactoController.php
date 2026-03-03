@@ -13,4 +13,19 @@ class ContactoController extends Controller
     public function recibe_formulario() {
         return "Formulario recibido";
     }
+    
+    public function listaContactos() {
+    
+        $contacto = new Contacto();
+        $contacto->nombre = $request->nombre;
+        $contacto->email = $request->email;
+        $contacto->mensaje = $request->mensaje;
+        $contacto->save();
+        return redirect()->back;
+    }
+    
+    public function listaContactos()
+    {
+
+    }
 }

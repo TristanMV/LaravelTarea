@@ -16,4 +16,5 @@ Route::get('/hola-mundo', function () {
 // RUTAS DEL FORMULARIO:
 Route::get('/formulario-contacto', [ContactoController::class, 'formulario_contacto']);
 Route::post('/recibe-formulario', [ContactoController::class, 'recibe_formulario']);
+Route::get('/listaContactos', [ContactoController::class, 'listaContactos']);
 
